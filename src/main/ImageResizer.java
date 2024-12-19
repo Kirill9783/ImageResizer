@@ -17,6 +17,7 @@ public class ImageResizer implements Runnable{
 
     @Override
     public void run(){
+        System.out.println("Log from thread: " + Thread.currentThread().getName());
         try {
             for (File file : files) {
                 BufferedImage image = ImageIO.read(file);
